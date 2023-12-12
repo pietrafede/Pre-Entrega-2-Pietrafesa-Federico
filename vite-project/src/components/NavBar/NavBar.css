@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar {
+    background-color: #000;
+    height: 200px;
+    font-size: 22px;
+    border: 5px solid yellow;
+    text-transform: capitalize;
+}
+.navbar .navbar-brand {
+    width: 35%;
+}
+
+.navbar .nav-item {
+    display: inline-block;
+    padding-top: 50px;
+}
+
+.Cart {
+    padding: 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+}
+
+.navbar a:hover {
+    color: yellow;
+    background-color: rgba(98, 0, 255, 0.363);
+    border: 1px solid yellow;
+    box-shadow: 2px 2px 10px rgba(255, 255, 0, 0.863);
+}
