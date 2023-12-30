@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+
+import ListUser from "../../components/ListUser/ListUser";
 
 const HomePage = () => {
     return (
-        <div>HomePage</div>
+        <div>
+            <ListUser />
+        </div>
     )
 }
 

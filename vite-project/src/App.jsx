@@ -20,9 +20,9 @@ const App = () => {
       </div>
       <Routes>
         <Route path="/" element={ HomePage}/>
-        <Route path="/Detail" element={ DetailPage}/>
-        <Route path="/Contact" element={ ContactPage}/>
-        <Route path="/Category" element={ CategoryPage}/>
+        <Route path="/detail:id" element={ DetailPage}/>
+        <Route path="/contact" element={ ContactPage}/>
+        <Route path="/category/:categoryid" element={ CategoryPage}/>
       </Routes>
     </Router>
   );
