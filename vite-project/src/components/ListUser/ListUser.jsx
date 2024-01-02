@@ -13,7 +13,7 @@ const ListUser = () => {
 
     return (
         <div className='Cards-List'>
-            {charse.map((char) => {
+            {chars.map((char) => {
                 return(
                     <div key={char.id}>
                         <Link to={`/detail/${char.id}`}> 
