@@ -6,23 +6,24 @@
 }
 
 .navbar {
-    background-color: #000;
-    height: 200px;
+    background: linear-gradient(to top, blueviolet, transparent 15%);
+    height: 6rem;
+    width: 100vw;
     font-size: 22px;
-    border: 5px solid yellow;
     text-transform: capitalize;
-}
-.navbar .navbar-brand {
-    width: 35%;
-}
-
-.navbar .nav-item {
-    display: inline-block;
-    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 10px 10px blueviolet;
 }
 
-.Cart {
-    padding: 1rem;
+.navbar .collapse.navbar-collapse {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .navbar-nav {
+    display: flex;
+    gap: 20px; 
 }
 
 .navbar a {
@@ -36,4 +37,8 @@
     background-color: rgba(98, 0, 255, 0.363);
     border: 1px solid yellow;
     box-shadow: 2px 2px 10px rgba(255, 255, 0, 0.863);
+}
+
+.Cart {
+    padding: 1rem;
 }
