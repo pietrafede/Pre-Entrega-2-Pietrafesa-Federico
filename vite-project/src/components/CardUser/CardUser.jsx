@@ -3,22 +3,23 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
+import { products } from "../../Products";
 
-const CardUser = ({ char }) => {
-    const { image, name, status, species, origin } = char;
+const CardUser = ({ products }) => {
+    const { titulo, imagen, detalle, precio } = products;
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
-                <CardMedia component="img" image={image} alt="green iguana" />
+                <CardMedia component="img" image={imagen} alt="img" />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                        {name}
+                        {titulo}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        {status} | {species}
+                        {detalle}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        {origin.name}
+                        {precio}
                     </Typography>
                 </CardContent>
             </CardActionArea>

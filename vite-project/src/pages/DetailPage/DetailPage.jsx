@@ -1,19 +1,28 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 import CardUser from "../../components/CardUser/CardUser";
+import { products } from "../../Products";
 
 const DetailPage = () => {
     let { id } = useParams();
+    const [products, setItem] = useState(null);
 
     useEffect(() => {
-        axios(`https://rickandmortyapi.com/api/character/${id}`).then((json) => setchars(json.data)
-        );
+        const products = products.find((products) => products.id === parseInt(id));
+        if (products) {
+            setItem(products);
+        } else {
+            console.error(`No se encontró el producto con ID ${id}`);
+        }
     }, [id]);
     
+    if (!products) {
+        return <div>Producto no encontrado.</div>;
+    }
+
     return ( 
         <div style={{display:"flex", justifyContent: "center", margin: 20}}> 
-            {Char.id ? <CardUser char={char} /> :null}
+            {products.id ? <CardUser products={products} /> :null}
         </div>
     )
 }
